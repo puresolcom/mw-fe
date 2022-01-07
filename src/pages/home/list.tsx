@@ -12,7 +12,7 @@ export const FeedList = () => {
     const { push } = useNavigation();
 
     const params = useRouterContext().useParams<any>();
-    const [limit, setLimit] = useState(1);
+    const [limit, setLimit] = useState(3);
     const { data: userData } = useGetIdentity();
     const { data, isLoading, refetch } = useCustom<IPost[]>({
         url: `${API_URL}/posts`,
